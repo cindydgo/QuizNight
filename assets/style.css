@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #000000; 
+    --secondary-color: #FFFFFF;
+    --background-color: #0E0717; 
+    --input-color: #c9c9c9;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+a{
+    color: var(--primary-color);
+    font-size: .9em;
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-family: 'Inconsolata', serif;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 1em;
+}
+
+header{
+    height: 3.2em;
+}
+
+/*********** PAGE ACCUEIL ***********/
+.nav-bar{
+    height: inherit;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height: 55px;
+}
+
+.fa-question{
+    transform: rotate(180deg);
+}
+
+.main_section{
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.choose-category{
+    font-family: 'Inconsolata', serif;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+#categories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 1.5em 1em 0;
+}
+
+.categorie-card{
+    text-align: center;
+    background: var(--secondary-color);
+    margin: 10px;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.footer{
+    height: 3.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    #categories{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/************* PAGE CATEGORIE ***************/
+.category_section{
+    height: 100vh;
+    background: var(--background-color);
+}
+
+.category_section ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.question-card{
+    background: var(--secondary-color);
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 200px;
+}
+
+.question-title{
+    margin-bottom: .5em;
+}
+/************* PAGE INSCRIPTION ***************/
+.register-container{
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.register-title{
+    color: var(--secondary-color);
+    font-family: 'Inconsolata', serif;
+    padding: 1em;
+    text-align: center;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 70%;
+    margin-inline: auto;
+    border-radius: 15px;
+}
+
+.register-form input {
+    margin: 10px 0 0;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    background: var(--input-color);
+}
+
+/*********** PAGE DE CONNEXION *************/
+.login-container{
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.login-title{
+    color: var(--secondary-color);
+    font-family: 'Inconsolata', serif;
+    padding: 1em;
+    text-align: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 70%;
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 1.5em;
+}
+
+.login-form input{
+    margin: 10px 0 15px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    background: var(--input-color);
+}
+
+.login-form input[type=submit]{
+    padding: 5px 15px;
+}
+
+/************** PAGE ADMIN ***************/
+.dashboard-section{
+    height:  100vh;
+}
+
+/************ PAGE DE QUESTIONS ************/
+.questions_section{
+    background-color: var(--background-color);
+}
+
+#question_form{
+    margin-inline: 15px;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+    position: relative;
+}
+
+.fieldset{
+    height: 170px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+}
+
+#question_form input[type=submit]{
+    grid-column: span 3;  /* This makes the submit button take up all 3 columns */
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding:  .6em 4em;
+    margin-top: 1.2em;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--input-color);
+    cursor: pointer;
+}
+
+
+/********** PAGE RESULTATS ************/
+.results-section{
+    background: var(--background-color);
+    height: 100vh;
+}
+
+.results-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin-inline: 1em;
+}
+
+.result{
+    background: var(--secondary-color);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.message{
+    margin-top: 2em;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+@media(max-width: 768px){
+    .results-section{
+        height: auto;
+    }
+    .results-details{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .message{
+        padding-bottom: 2em;
+    }
+}
